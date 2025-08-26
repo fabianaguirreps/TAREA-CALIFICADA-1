@@ -2,13 +2,13 @@ import java.util.Scanner; // Importa la clase Scanner para entrada de datos
 
 public class PA2 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in); // Crea el objeto Scanner
+        Scanner sc = new Scanner(System.in); 
 
-        // Solicita el nombre del cliente
+      
         System.out.print("Ingrese nombre del cliente: ");
         String nombreCliente = sc.nextLine();
 
-        // Variables para almacenar datos de los productos
+       
         String[] nombresProducto = new String[2];
         double[] precios = new double[2];
         int[] cantidades = new int[2];
@@ -27,7 +27,7 @@ public class PA2 {
 
             System.out.print("Cantidad: ");
             cantidades[i] = sc.nextInt();
-            sc.nextLine(); // Limpia el buffer
+            sc.nextLine(); 
 
             // Calcula el subtotal
             subtotales[i] = precios[i] * cantidades[i];
@@ -47,7 +47,7 @@ public class PA2 {
             totales[i] = subtotales[i] - descuentos[i];
         }
 
-        // Imprime la boleta con formato
+        
         System.out.println("\n------------------ BOLETA DE VENTA ------------------");
         System.out.printf("Cliente: %s\n", nombreCliente);
         System.out.println("-----------------------------------------------------");
@@ -62,6 +62,6 @@ public class PA2 {
         System.out.printf("TOTAL A PAGAR: %.2f\n", totalPagar);
         System.out.println("-----------------------------------------------------");
 
-        sc.close(); // Cierra el Scanner
+        sc.close(); 
     }
 }
